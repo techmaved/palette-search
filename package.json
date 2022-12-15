@@ -19,7 +19,25 @@
         "command": "palette-search.search",
         "title": "Internet Search"
       }
-    ]
+    ],
+    "configuration": [
+			{
+				"id": "searchEngineConf",
+				"title": "Search engine",
+				"properties": {
+					"palette-search.searchEngine": {
+						"type": "string",
+						"enum": [
+							"DuckDuckGo",
+							"Bing"
+						],
+						"default": "Google",
+						"description": "Choose the search engine you want to query when using the extension.",
+						"scope": "window"
+					}
+				}
+			}
+		]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
