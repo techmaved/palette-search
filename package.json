@@ -36,7 +36,20 @@
 						"scope": "window"
 					}
 				}
-			}
+			}, 
+      {
+        "id": "searchEngineConfFree",
+        "title": "Search engine - own",
+        "properties": {
+          "palette-search.searchEngineFree": {
+            "type": "string",
+            "input": true,
+            "default": "",
+            "description": "Paste you own search engine here: Search strings or unsupported browsers are the keywords you need for the url. Only full urls work.",
+            "scope": "window"
+          }
+        }
+      }
 		]
   },
   "scripts": {

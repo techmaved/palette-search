@@ -12,6 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		const config = vscode.workspace.getConfiguration('palette-search');
 		const searchEngine = config.get('searchEngine');
+		const searchEngineFree = config.get('searchEngineFree');
 
 		let searchURL;
 		const urls: {[key: string]: string} = {
@@ -19,13 +20,19 @@ export function activate(context: vscode.ExtensionContext) {
 			DuckDuckGo: 'https://duckduckgo.com/?q=',
 			Bing: 'https://www.bing.com/search?q='
 		};
-		Object.keys(urls).forEach(el => {
-			if (el === searchEngine) {
-				searchURL = urls[el];
-			}
-		});
+
+		if (searchEngineFree === '') {
+			Object.keys(urls).forEach(el => {
+				if (el === searchEngine) {
+					searchURL = urls[el];
+				}
+			});
+		} else {
+			searchURL = searchEngineFree;
+		}
+
 		
-		if (searchQuery !== undefined) {
+		if (searchQuery !== '') {
 			searchURL = searchURL + searchQuery;
 			vscode.env.openExternal(Uri.parse(searchURL));
 		}
