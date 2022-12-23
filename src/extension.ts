@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 		const searchEngine = config.get('searchEngine');
 
 		let searchURL;
-		const urls = {
+		const urls: {[key: string]: string} = {
 			Google: 'https://www.google.com/search?q=',
 			DuckDuckGo: 'https://duckduckgo.com/?q=',
 			Bing: 'https://www.bing.com/search?q='
