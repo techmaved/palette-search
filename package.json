@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "palette-search.search",
-        "title": "Internet Search"
+        "title": "Palette Search"
       }
     ],
     "configuration": [
