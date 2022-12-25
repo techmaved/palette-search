@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		
-		if (searchQuery !== '') {
+		if (searchQuery !== '' && searchQuery !== undefined) {
 			searchURL = searchURL + searchQuery;
 			vscode.env.openExternal(Uri.parse(searchURL));
 		}
