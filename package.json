@@ -5,9 +5,10 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmaved/palette-search"
+    "url": "https://github.com/techmaved/palette-search.git"
   },
   "license": "Public domain license",
+  "publisher": "Armin Burger",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -64,7 +65,8 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "build": "vsce package"
+    "build": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
