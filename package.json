@@ -16,13 +16,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:palette-search.search"
+    "onCommand:palette-search.searchInput"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "palette-search.search",
+        "command": "palette-search.searchInput",
         "title": "Palette Search"
       }
     ],

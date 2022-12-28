@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 import { Uri } from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerCommand('palette-search.search', async () => {
+	let disposable = vscode.commands.registerCommand('palette-search.searchInput', async () => {
 		
 		const searchQuery = await vscode.window.showInputBox({
 			title: 'Palette Search',
