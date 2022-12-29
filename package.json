@@ -9,6 +9,7 @@
   },
   "license": "Public domain license",
   "publisher": "Armin Burger",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.71.0"
   },
